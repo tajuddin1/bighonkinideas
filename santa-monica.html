@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Honkin' Ideas</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="shortcut icon" href="assets/images/logoCircle.webp" type="image/x-icon">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body id="body">
+    <div class="main">
+        <a href="work.html">
+            <div class="crossBarWrapper">
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </a>
+
+        <section>
+            <div class="layoutWorks-module--header--eaxx3">
+                <div class="layoutWorks-module--container--0mBGg">
+                    <h1>City of Santa Monica</h1>
+                    <ul>
+                        <li>Video</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="layoutWorks-module--feature--LXIXf" id="featuredImg"
+                style="background-image: url(assets/images/Santa-Monica/matador.jpg);background-position-y: 65.3659%;">
+            </div>
+        </section>
+        <section>
+            <div class="layoutWorks-module--copyBlockNoBotPad--SeAVM">
+                <div class="layoutWorks-module--container--0mBGg">
+                    <div class="layoutWorks-module--twoColumn--BUkhW">
+                        <div class="layoutWorks-module--one---SqdT">
+                            <h5>City of Santa Monica</h5>
+                            <p>One of the most desirable beach communities and vacation destinations on the West Coast.
+                            </p>
+                            <h5>Headquarters</h5>
+                            <p>Santa Monica, California</p>
+                            <h5>Industry</h5>
+                            <p>Public Service</p>
+                            <h5>Size</h5>
+                            <p>90,000 residents</p>
+                            <h5 class="layoutWorks-module--marginTop3--L6E+x">Services we provided</h5>
+                            <ul class="list_style">
+                                <li>Strategy</li>
+                                <li>Writing</li>
+                                <li>Design</li>
+                                <li>Broadcast</li>
+                                <li>Media Planning & Buying</li>
+                            </ul>
+                        </div>
+                        <div class="layoutWorks-module--two--KSZ9r">
+                            <h4>The client</h4>
+                            <p>Santa Monica is a coastal city west of downtown Los Angeles, 5 miles from UCLA’s Westwood
+                                campus and home to 90,000 residents. Santa Monica Beach is fringed by Palisades Park
+                                with views overlooking the Pacific Ocean. Historic Santa Monica Pier is home to the
+                                Pacific Park amusement park, famed Hippodrome Carousel and Santa Monica Pier Aquarium.
+                                Known for its stunning collection of art galleries, remarkable restaurants and casual
+                                California lifestyle, Santa Monica is a vacation destination for well over 4 million
+                                domestic and international tourists a year.</p>
+                            <h4>The challenge</h4>
+                            <p>After studying the successful video campaign BHI did to promote the City’s bustling 3rd
+                                Street Promenade, they tapped us to create a pedestrian safety campaign to remind
+                                motorists and pedestrians about the distractions that come with visiting such a high
+                                interest, high traffic, highly compacted area.</p>
+                            <h4>The solution</h4>
+                            <p>To make the point without becoming too serious, BHI used edgy humor to meet the challenge
+                                — to set up a potential calamity and defuse it before it became real.</p>
+                            <p>Voiceover: “You know, it really shouldn’t be this hard to cross the street. A reminder to
+                                everyone. Let’s watch out for each other.” A message from The City of Santa Monica.</p>
+                            <p>We created a 30-second TV spot that aired locally. The spot
+                                was underscored by flamboyant bullfight music and crowd cheers to set the scene. A
+                                preening matador was featured in a sequined “suit of lights,” as a stand-in for
+                                pedestrians who might have to contend with honking vehicles instead of menacing bulls.
+                            </p>
+                            <p style="margin-bottom:50px;">Point made. Point taken.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="layoutWorks-module--featuredVideoContainer--3lrVv">
+                <div class="layoutWorks-module--container--0mBGg">
+                    <video controls poster="assets/images/Santa-Monica/matador.jpg">
+                        <source src="assets/images/Santa-Monica/matador.webm" type="video/webm">
+                    </video>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section>
+    <div class="start-poroject">
+        <div class="start-poroject--container">
+            <h3>Let’s get to work.</h3>
+            <a class="start-poroject--btn" href="contact.html">Start a project</a>
+        </div>
+    </div>
+</section>
+<footer style="opacity: 1;">
+    <p>© 2022 Big Honkin’ Ideas. All Rights Reserved.</p>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    let sections = gsap.utils.toArray(".panel");
+
+    gsap.to(sections, {
+        xPercent: - 100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".container",
+            pin: true,
+            scrub: -100,
+            snap: 1 / (sections.length + 1),
+            // base vertical scrolling on how wide the container is so it feels more natural.
+            end: "+=900",
+        }
+    });
+</script>
+</body>
+
+</html>

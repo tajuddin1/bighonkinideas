@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Honkin' Ideas</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="shortcut icon" href="assets/images/logoCircle.webp" type="image/x-icon">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body id="body">
+    <div class="main">
+        <a href="work.html">
+            <div class="crossBarWrapper">
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </a>
+
+        <section>
+            <div class="layoutWorks-module--header--eaxx3">
+                <div class="layoutWorks-module--container--0mBGg">
+                    <h1 style="font-size:107px;">Partnership for a Drug-Free <br> America</h1>
+                    <ul>
+                        <li>(Yes, the original)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="layoutWorks-module--feature--LXIXf" id="featuredImg"
+                style="background-image: url(assets/images/pdfa/placeholder1.jpg);">
+            </div>
+        </section>
+        <section>
+            <div class="layoutWorks-module--copyBlockNoBotPad--SeAVM">
+                <div class="layoutWorks-module--container--0mBGg">
+                    <div class="layoutWorks-module--twoColumn--BUkhW">
+                        <div class="layoutWorks-module--one---SqdT">
+                            <h5>Partnership for a Drug-Free America</h5>
+                            <p>PDFA was formed in 1987 by an association of volunteer advertising agencies and tv
+                                networks to combat rising drug use among teens.</p>
+                            <h5>Headquarters</h5>
+                            <p>Los Angeles and New York</p>
+                            <h5>Industry</h5>
+                            <p>Public Service, Nonprofit</p>
+                            <h5>Volunteer staff</h5>
+                            <p>100+</p>
+                            <h5 class="layoutWorks-module--marginTop3--L6E+x">Services we provided</h5>
+                            <ul class="list_style">
+                                <li>Research</li>
+                                <li>Strategy</li>
+                                <li>Writing</li>
+                                <li>Broadcast</li>
+                                <li>Media Planning & Buying</li>
+                            </ul>
+                        </div>
+                        <div class="layoutWorks-module--two--KSZ9r">
+                            <h4>The client</h4>
+                            <p>By the late 80’s, America was losing its War on Drugs. “Just say no” was an ineffective
+                                response to the realities of spiking drug use among America’s teens.</p>
+                            <p>The crisis led a group of concerned and committed ad agencies — spearheaded by
+                                keye/donna/pearlstein and Daily Associates Los Angeles — to approach major tv networks,
+                                solicit free airtime and volunteer their creative services to develop a powerful
+                                anti-drug campaign to stem the tide. The media went all in. The agencies responded with
+                                powerful campaigns within weeks.</p>
+                            <h4>The challenge</h4>
+                            <p>Develop bold, breakthrough tv commercials to go directly at the drug epidemic. No
+                                jingles, no syrupy scripts, no nonsense. The strategy was simple: Fight fire with fire.
+                            </p>
+                            <h4>The solution</h4>
+                            <p>Of the dozens of spots created by The Partnership for a Drug-Free America, the Fried Egg
+                                tv spot — “This is your brain on drugs. Any questions?” — was the most effective by any
+                                measure: Impact, message, believability, memorability, and tangible results.</p>
+                            <p style="margin-bottom:50px;">The award-winning spot was created and written by BHI founding partner Larre Johnson. It
+                                ranks as TV Guide’s 8th Best TV Commercial of All-Time. It became the most remembered
+                                spot of the 1980’s. More importantly, it raised awareness about drug abuse, demystified
+                                the effects of doing drugs, changed attitudes and the lives of teens. It has remained in
+                                the language for decades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="layoutWorks-module--featuredVideoContainer--3lrVv">
+                <div class="layoutWorks-module--container--0mBGg">
+                    <video controls poster="assets/images/pdfa/placeholder1.jpg">
+                        <source src="assets/images/pdfa/brain-on-drugs.webm" type="video/webm">
+                    </video>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section>
+    <div class="start-poroject">
+        <div class="start-poroject--container">
+            <h3>Let’s get to work.</h3>
+            <a class="start-poroject--btn" href="contact.html">Start a project</a>
+        </div>
+    </div>
+</section>
+<footer style="opacity: 1;">
+    <p>© 2022 Big Honkin’ Ideas. All Rights Reserved.</p>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    let sections = gsap.utils.toArray(".panel");
+
+    gsap.to(sections, {
+        xPercent: - 100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".container",
+            pin: true,
+            scrub: -100,
+            snap: 1 / (sections.length + 1),
+            // base vertical scrolling on how wide the container is so it feels more natural.
+            end: "+=900",
+        }
+    });
+</script>
+</body>
+
+</html>

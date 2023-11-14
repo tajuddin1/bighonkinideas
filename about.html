@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Honkin' Ideas</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="shortcut icon" href="assets/images/logoCircle.webp" type="image/x-icon">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .bar1,
+        .bar2 {
+            background-color: #002049;
+        }
+    </style>
+</head>
+
+<body id="body">
+<nav id="navbar">
+    <div class="nav_menu">
+        <div class="site_logo">
+            <a href="index.html">
+            <div class="logo_wrapper">
+                <img src="assets/images/logoCircle.webp" alt="">
+            </div>
+            </a>
+        </div>
+        <div class="hamburger_menu" onclick="myFunction(this)">
+            <div class="bar1" id="bar1"></div>
+            <div class="bar2" id="bar2"></div>
+        </div>
+        <div id="mobileMenuContainer" class=" ">
+            <div class="mobile--nav">
+                <ul>
+                    <li>
+                        <a href="about.html" class="mobile_menu_link">About</a>
+                        </li>
+                    <li>
+                        <a href="services.html" class="mobile_menu_link">Services</a>
+                        </li>
+                    <li>
+                        <a href="work.html" class="mobile_menu_link">Work</a>
+                        </li>
+                    <li>
+                        <a href="contact.html" class="mobile_menu_link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <div class="main">
+        <section>
+            <div class="about--layout">
+                <div class="about--container">
+                    <div class="page--label">
+                        <h6>About</h6>
+                    </div>
+                    <h2>Big<br>Honkin’<br>Ideas</h2>
+                    <p>BHI is a 25-year-old, full-service creative agency
+                        headquartered in Los Angeles. Our business card says: <strong>Everything you want in an Agency.
+                            Except the Agency.</strong> — a proposition that’s been especially attractive to clients
+                        who’ve had their fill of prima donnas, politics, any process but the thought process, and paying
+                        an arm and a leg. We vote early and often for fresh thinking, laser strategies, sharp creative,
+                        rapid response, good chemistry, grade cards and fun. We can start yesterday.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="About--team">
+                <div class="About--team--container">
+                    <div>
+                        <div class="layoutAbout-module--photoMobile--n+Dpj">
+
+                        </div>
+                        <h2>Our Team</h2>
+                        <p>Our team speaks fluent digital, social, financial, cultural, medical, higher ed, automotive
+                            and fun.
+                            <!-- --><strong>Our principals</strong> have banked 60+ years in advertising, marketing,
+                            strategic planning and branding.
+                            <!-- -->
+                        </p>
+                    </div>
+                    <div class="About--photo--dob">
+                        <img src="assets/images/twentyfive.webp" alt="">
+                    </div>
+                </div>
+                <div class="About--teamGrid">
+                    <div class="team--slide" id="slide" draggable="true">
+                        <div class="team--info">
+                            <div class="team--details">
+                                <h5>Larre Johnson</h5>
+                                <h6>Partner, Creative Director</h6>
+                            </div>
+                            <img src="assets/images/larre.webp" alt="">
+                        </div>
+                        <div class="layoutAbout-module--emptyTeam--is0hW"></div>
+                        <div class="team--info">
+                            <div class="team--details">
+                                <h5>Karl Kristkeitz</h5>
+                                <h6>Partner, Creative Director</h6>
+                            </div>
+                            <img src="assets/images/karl.webp" alt="">
+                        </div>
+                        <div class="layoutAbout-module--emptyTeam--is0hW"></div>
+                        <div class="team--info">
+                            <div class="team--details">
+                                <h5>Justin Edelson</h5>
+                                <h6>Digital Director</h6>
+                            </div>
+                            <img src="assets/images/justin.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section>
+    <div class="start-poroject">
+        <div class="start-poroject--container">
+            <h3>Let’s get to work.</h3>
+            <a class="start-poroject--btn" href="contact.html">Start a project</a>
+        </div>
+    </div>
+</section>
+<footer style="opacity: 1;">
+    <p>© 2022 Big Honkin’ Ideas. All Rights Reserved.</p>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    let sections = gsap.utils.toArray(".panel");
+
+    gsap.to(sections, {
+        xPercent: - 100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".container",
+            pin: true,
+            scrub: -100,
+            snap: 1 / (sections.length + 1),
+            // base vertical scrolling on how wide the container is so it feels more natural.
+            end: "+=900",
+        }
+    });
+</script>
+</body>
+
+</html>
